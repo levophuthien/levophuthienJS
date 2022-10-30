@@ -1,0 +1,116 @@
+.container {
+    width: 90%;
+    margin: 0px auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.banner {
+    width: 100%;
+    height: 550px;
+    background-image: url(images/Banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 200px;
+}
+
+table {
+    padding: 5px;
+    width: 90%;
+    height: 600px;
+    margin: 0px auto;
+    background-color: rgb(245, 243, 243);
+    opacity: 0.80;
+    margin-top: 26px;
+    border-radius: 5px;
+}
+
+table td,th {
+    padding: 5px;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 10px;
+    border-spacing: 3px;
+    border: none;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+th {
+    background-color: rgb(155, 155, 155);
+}
+
+input {
+
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.row {
+    width: 30px;
+}
+#mucgia {
+    margin-top: 60px;
+    width: 100px;
+    line-height: 80px;
+    outline: none;
+    border: none;
+    background-color: gray;
+    border-radius: 15px;
+    font-size: 15px;
+    color: white;
+    margin-left: 1230px;
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+    font-family: 'Courier New', Courier;
+}
+
+.container .header-info {
+    width: 87%;
+    margin: 10px;
+    padding: 0px;
+    display: flex;
+    background-color: black;
+    box-shadow: 0 0 5px grey;
+    border-radius: 5px;
+    height: 40px;
+    padding-right: 30px;
+    position: fixed;
+}
+
+.header-info>li>a {
+    padding-left: 30px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 40px;
+    padding-right: 75px;
+}
+
+.header-info>li>a:hover {
+    transition: all .5s linear;
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.container footer {
+    margin-top: 500px;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(41, 40, 40);
+    margin-top: 20px;
+}
+
+.container footer .information {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

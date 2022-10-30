@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>28-PS23729-thiện - FPT Polytechnic</title>
+    <link rel="stylesheet" href="sanpham.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<script>
+    var index = 1;
+    function back() {
+        index--;
+        if (index < 1) index = 12;
+        var link = document.getElementById("image");
+        link.src = "images/" + index + ".webp";
+        document.getElementById("count").innerHTML = index + "/12";
+    }
+    function next() {
+        index++;
+        if (index > 12) index = 1;
+        var link = document.getElementById("image");
+        link.src = "images/" + index + ".webp";
+        document.getElementById("count").innerHTML = index + "/12";
+    }
+    setInterval("next()", 5000)
+</script>
+
+<body>
+    <div class="container">
+        <header>
+            <ul class="header-info">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="GioiThieu.html">GIỚI THIỆU</a></li>
+                <li><a href="Sanpham.html">Bộ SƯU TẬP</a>
+                <li><a href="Lienhe.html">LIÊN HỆ</a></li>
+                <li><a href="Form.html">ĐĂNG KÍ</a></li>
+                <li><a href="table.html">Giỏ HÀNG</a></li>
+                <input type="search" placeholder="Tìm Kiếm...">
+            </ul>
+            <hr>
+            <h3 id="bst">Bộ Sưu Tập Giày</h3>
+            <hr>
+            <img src="images/1.webp" id="image">
+            <i id="icon2" class='bx bxs-chevron-right-circle' onclick="next()"></i>
+            <i id="icon1" class='bx bxs-chevron-left-circle' onclick="back()"></i>
+            <p id="count">1/12</p>
+        </header>
+        <div class="content">
+            <div class="PR">
+                <hr style="width: 100%;">
+                <h1 style="text-align: center;">Thông Tin Sản Phẩm</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="course">
+            <img src="Image/Nike Air Force 1.webp" width="500px" height="490px">
+            <div class="info-nike">
+                <img src="Image/Chitietsp1.webp">
+                <img src="Image/chitietsp2.webp">
+                <img src="Image/chitietsp3.webp">
+            </div>
+            <div class="info-nike">
+                <img src="Image/chitietsp4.webp">
+                <img src="Image/chitietsp5.webp">
+                <img src="Image/chitietsp6.webp">
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Nike Air Force 1 '07 Craft</h1>
+            <h3>Men's Shoe</h3>
+            <p>
+                3.500.000₫
+            </p>
+            <p>
+                The legend lives on in the Nike Air Force 1 '07 Craft—a modern take on the iconic AF-1 with new details
+                like fresh graphics on the tongue and heel. Crisp leather, brushed suede and exposed stitching on the
+                upper add texture and depth while the new plush liner feels soft and comfortable. Its redesigned shape
+                returns to OG roots, adding heritage style.
+            </p>
+
+            <ul>
+                <li>Colour Shown: White/Summit White/Vast Grey/White</li>
+                <li>Style: CN2873-101</li>
+            </ul>
+            <p></p>
+            <label>Size</label>
+            <select>
+                <option value="">35</option>
+                <option value="">36</option>
+                <option value="">37</option>
+                <option value="">38</option>
+                <option value="">39</option>
+                <option value="">40</option>
+                <option value="">41</option>
+                <option value="">42</option>
+            </select>
+            <div>
+                <iframe
+                    src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=120&layout=button&action=like&size=small&share=true&height=65&appId"
+                    width="120" height="65" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <a href="SanPham.html">Mua ngay!</a>
+        </div>
+        <footer>
+            <div class="information">
+                <div class="lienhe">
+                    <h3>LIÊN HỆ:</h3>
+                    <p><i class="Email"> Email: nikestore@gmail.com</i><br>
+                        <i class="phone"> Hotline: 090 909 0909</i>
+                        <br>
+                        <i class="dc">Việt Nam</i>
+                    </p>
+                </div>
+                <div class="lienhe">
+                    <h3>GET HELP</h3>
+                    <p>Order Status</p>
+                    <p>Delivery</p>
+                    <p>Returns</p>
+                    <p>Payment Options</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://uhchat.net/code.php?f=ac2569"></script>
+</body>
+
+</html>

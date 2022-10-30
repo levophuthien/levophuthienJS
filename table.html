@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS23729 - Lê Võ Phú Thiện</title>
+    <link rel="stylesheet" href="table.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <ul class="header-info">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="GioiThieu.html">GIỚI THIỆU</a></li>
+                <li><a href="Sanpham.html">Bộ SƯU TẬP</a>
+                <li><a href="Lienhe.html">LIÊN HỆ</a></li>
+                <li><a href="Form.html">ĐĂNG KÍ</a></li>
+                <li><a href="table.html">Giỏ HÀNG</a></li>
+                <input name="tk" type="search" placeholder="Tìm Kiếm...">
+            </ul>      
+        </header>
+        <div class="banner">
+            <select name="" id="mucgia" onchange="doimucgia()">
+                <option value="-1">Mức Giá</option>
+                <option value="4000">4000</option>
+                <option value="4500">4500</option>
+                <option value="4700">4700</option>
+                <option value="5000">5000</option>
+            </select>
+            <hr>
+            <table border="1">
+                <tr>
+                    <td class="row"></td>
+                    <th>Hàng Hóa</th>
+                    <th>Đơn giá</th>
+                    <th>Số Lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <tr>
+                    <td class="row"> <input onclick="tich1checkbox(0)" type="checkbox"name="chon"> </td>
+                    <td>Air Force 1</td>
+                    <td name="gia">4500</td>
+                    <td> <input onkeyup="tinhtien(this)" type="text"name="soluong"disabled> </td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td class="row"> <input onclick="tich1checkbox(1)" type="checkbox"name="chon"> </td>
+                    <td>Air Force 1 lv8</td>     
+                    <td name="gia">4300</td>
+                    <td> <input onkeyup="tinhtien(this)" type="text"name="soluong"disabled> </td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td class="row"> <input onclick="tich1checkbox(2)" type="checkbox"name="chon"> </td>
+                    <td>Air Force 1 Crater Nature</td>
+                    <td name="gia">4700</td>
+                    <td> <input onkeyup="tinhtien(this)" type="text"name="soluong"disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td class="row"> <input onclick="tich1checkbox(3)" type="checkbox"name="chon"> </td>
+                    <td>Air Force 1 07 SE</td>
+                    <td name="gia">3900</td>
+                    <td> <input onkeyup="tinhtien(this)" type="text"name="soluong"disabled> </td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td class="row"> <input onclick="tich1checkbox(4)" type="checkbox"name="chon"> </td>
+                    <td>Air Jordan 1 Low SE</td>  
+                    <td name="gia">5500</td>
+                    <td><input onkeyup="tinhtien(this)" type="text"name="soluong"disabled> </td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td class="row"> <input onclick="tich1checkbox(5)" type="checkbox"name="chon"> </td>
+                    <td id="tensp">Air Jordan 1 Mid SE</td>
+                    <td name="gia">4300</td>
+                    <td><input onkeyup="tinhtien(this)" type="text" name="soluong"disabled> </td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Tổng</td>
+                    <td id="sum">#</td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <div class="information">
+                <div class="lienhe">
+                    <h3>LIÊN HỆ:</h3>
+                    <p><i class="Email"> Email: nikestore@gmail.com</i><br>
+                        <i class="phone"> Hotline: 090 909 0909</i>
+                        <br>
+                        <i class="dc">Việt Nam</i>
+                    </p>
+                </div>
+                <div class="lienhe">
+                    <h3>GET HELP</h3>
+                    <p>Order Status</p>
+                    <p>Delivery</p>
+                    <p>Returns</p>
+                    <p>Payment Options</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://uhchat.net/code.php?f=ac2569"></script>
+    </div>
+</body>
+</html>
+<script>
+    function doimucgia() {
+    var arrgia = document.getElementsByName("gia");
+    var obj = document.getElementById("mucgia");
+    var mucgiadangchon = obj.value;
+    for (var i = 0; i < arrgia.length; i++) {
+        var gia = parseFloat(arrgia[i].innerText);
+        if (gia < mucgiadangchon || mucgiadangchon == -1) {
+            arrgia[i].parentNode.style.display = "";
+        } else {
+            arrgia[i].parentNode.style.display = "none";
+        }
+    }
+    tongtien();
+}
+function tich1checkbox(i) {
+    var arrSL = document.getElementsByName("soluong");
+    arrSL[i].disabled = !arrSL[i].disabled;
+    if (arrSL[i].disabled == true) {
+        arrSL[i].value = "";
+        arrSL[i].parentNode.nextElementSibling.innerText="";
+       
+    }
+    
+    tongtien();
+}
+function tinhtien(a) {
+    var soluong = a.value;
+    var sum = a.parentNode.previousElementSibling.innerText;
+    a.parentNode.nextElementSibling.innerText = soluong * Number(sum);
+    tongtien();
+}
+function tongtien() {
+    var money =0 ;
+    var arrThanhTien = document.getElementsByName("thanhtien");
+    for (var i = 0; i < arrThanhTien.length; i++) {
+        if (arrThanhTien[i].parentNode.style.display == "") {
+            var tien = arrThanhTien[i].innerText;
+            money += Number(tien);
+            
+        }  
+    } 
+    document.getElementById("sum").innerText = money;
+}
+</script>

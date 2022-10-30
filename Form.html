@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>28-PS23729-thiện - FPT Polytechnic</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .all {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dangki {
+            width: 1200px;
+            height: 550px;
+            background-image: url(Image/Banner2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        form {
+            padding: 10px;
+            width: 35%;
+            height: 580px;
+            margin: 0px auto;
+            background-color: rgb(245, 243, 243);
+            opacity: 0.85;
+            margin-top: 26px;
+            border-radius: 5px;
+        }
+
+        .khung {
+            display: block;
+            width: 90%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .qt {
+            width: 40%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 200px;
+            line-height: 30px;
+            outline: none;
+            border: none;
+            background-color: gray;
+            border-radius: 15px;
+            font-size: 15px;
+            color: white;
+        }
+
+        button:hover {
+            color: white;
+            background-color: black;
+            transition: all 3s linear;
+            font-size: 17px;
+        }
+
+        .error {
+            display: block;
+            width: 90%;
+            outline: none;
+            border: none;
+            background-color: rgb(233, 39, 39);
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        .success {
+            display: block;
+            width: 90%;
+            outline: none;
+            border: none;
+            background-color: #66ff00;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <ul class="header-info">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="GioiThieu.html">GIỚI THIỆU</a></li>
+                <li><a href="Sanpham.html">Bộ SƯU TẬP</a>
+                <li><a href="Lienhe.html">LIÊN HỆ</a></li>
+                <li><a href="Form.html">ĐĂNG KÍ</a></li>
+                <li><a href="table.html">Giỏ HÀNG</a></li>
+                <input type="search" placeholder="Tìm Kiếm...">
+            </ul>
+        </header>
+        <div class="all">
+            <div class="dangki">
+                <form>
+                    <div>
+                        <label for="masv">Mã sinh viên :</label>
+                        <input type="text" id="masv" class="khung" placeholder="Nhập mã sinh viên">
+
+                    </div>
+                    <div>
+                        <label for="name">Họ và tên :</label>
+                        <input type="text" id="name" class="khung" placeholder="Nhập họ va tên">
+
+                    </div>
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" class="khung" placeholder="Nhập vào email">
+
+                    </div>
+                    <div>
+                        <label for="gt">Giới tính :</label>
+                        <input type="radio" value="Nam" id="gt" name="slip">
+                        <label for="gt">Nam</label>
+                        <input type="radio" value="Nữ" id="gt" name="slip">
+                        <label for="gt">Nữ</label>
+                    </div>
+                    <div>
+                        <label for="st">Sở thích :</label>
+                        <input type="checkbox" id="st" name="st">
+                        <label for="st">Đọc Sách</label>
+                        <input type="checkbox" id="st" name="st">
+                        <label for="st">Du lịch</label>
+                        <input type="checkbox" id="st" name="st">
+                        <label for="st">Ẩm Thực</label>
+                        <input type="checkbox" id="st" name="st">
+                        <label for="st">Âm Nhạc</label>
+                        <input type="checkbox" id="st" name="st">
+                        <label for="st">Khác</label>
+
+                    </div>
+                    <div>
+                        <label for="nationality">Quốc tịch :</label>
+                        <select name="" id="nationality" class="qt">
+                            <option value="0" id="qtich">Chọn Quốc Tịch</option>
+                            <option value="1" id="qtich">Việt Nam</option>
+                            <option value="2" id="qtich">Nhật Bản</option>
+                            <option value="3" id="qtich">Trung Quốc</option>
+                            <option value="4" id="qtich">Hàn Quốc</option>
+                            <option value="5" id="qtich">Lào</option>
+
+                        </select>
+                    </div>
+                    <div>
+                        <label for="note">Ghi chú :</label>
+                        <textarea placeholder="Nhập không quá 200 kí tự" class="khung" name="" id="note" cols="30"
+                            rows="10"></textarea>
+                    </div>
+
+                    <button onclick="checkform()" type="button">Login</button>
+                    <div style="color: red; font-weight: bold; font-size: 10px; padding: 5px;" id="baoloi"></div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="information">
+                <div class="lienhe">
+                    <h3>LIÊN HỆ:</h3>
+                    <p><i class="Email"> Email: nikestore@gmail.com</i><br>
+                        <i class="phone"> Hotline: 090 909 0909</i>
+                        <br>
+                        <i class="dc">Việt Nam</i>
+                    </p>
+                </div>
+                <div class="lienhe">
+                    <h3>GET HELP</h3>
+                    <p>Order Status</p>
+                    <p>Delivery</p>
+                    <p>Returns</p>
+                    <p>Payment Options</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://uhchat.net/code.php?f=ac2569"></script>
+</body>
+
+</html>
+<script>
+    function checkform() {
+        var error = "";
+        var masv = document.getElementById("masv");
+        if (masv.value == "") {
+            masv.className = "error";
+            error += "Không được để trống mã sinh viên! <br>";
+        }
+        var names = document.getElementById("name");
+        if (names.value == "") {
+            names.className = "error";
+            error += "Không được để trống họ và tên! <br>";
+        }
+        var email = document.getElementById("email");
+        if (email.value == "") {
+            email.className = "error";
+            error += "Không được để trống Email! <br>";
+        }
+        var count = 0;
+        var gender = document.getElementsByName("slip");
+        for (var i = 0; i < gender.length; i++) {
+            if (gender[i].checked == true)
+                count++;
+        }
+        if (count == 0) {
+            error += "Phải chọn giới tính ! <br>";
+        }
+        var flag = false;
+        var hobby = document.getElementsByName("st");
+        for (var i of hobby) {
+            if (i.checked) flag = true;
+        }
+        if (flag == false) {
+            error += "Vui lòng chọn ít nhất một sở thich! <br>";
+        }
+        var choose = document.getElementById("nationality");
+        if (choose.value == 0) {
+            error += "Vui lòng chọn quốc tịch! <br>";
+        }
+        var note = document.getElementById("note");
+        if (note.value.length >= 200) {
+            error += "không được nhập quá 200 kí tự! <br>";
+            note.className = "error";
+        } else if (note.value.length == 0) {
+            error += "Ghi Chú không được bỏ trống! <br>";
+            note.className = "error";
+        }
+        if (error != "") {
+            document.getElementById("baoloi").innerHTML = error;
+        } else {
+            document.getElementById("baoloi").innerHTML = "ĐĂNG KÍ THÀNH CÔNG!";
+            document.getElementById("baoloi").style.color = "green";
+        }
+        setTimeout("document.getElementById('baoloi').innerHTML=''", 7000);
+    }
+</script>
